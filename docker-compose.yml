@@ -1,0 +1,24 @@
+version: "2"
+
+volumes:
+  db-data:
+    external: false
+
+services:
+  db:
+    environment:
+      POSTGRES_USER:
+      POSTGRES_PASSWORD:
+    image: postgres:9.5
+    volumes:
+      - db-data:/usr/local/psql/data
+
+  app:
+    env_file: .env
+    build: .
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
