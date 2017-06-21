@@ -5,6 +5,8 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    Minuteman.add("page_views:article:#{@article.id}")
+    @page_views = Minuteman.count("page_views:article:#{@article.id}")
   end
 
   def new

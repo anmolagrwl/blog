@@ -3,6 +3,7 @@ version: "2"
 volumes:
   db-data:
     external: false
+  redis: {}
 
 services:
   db:
@@ -12,6 +13,13 @@ services:
     image: postgres:9.5
     volumes:
       - db-data:/usr/local/psql/data
+  
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis:/data
 
   app:
     env_file: .env
@@ -22,3 +30,6 @@ services:
       - "8080:8080"
     depends_on:
       - db
+      - redis
+    links:
+      - redis
