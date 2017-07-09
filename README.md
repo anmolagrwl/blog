@@ -13,3 +13,6 @@ docker exec -it blog_app_1 /bin/bash
 
 docker-compose start
 docker-compose stop
+
+
+http://blog.kontena.io/building-minimal-docker-image-for-rails/

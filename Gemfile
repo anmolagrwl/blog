@@ -135,6 +135,6 @@ gem 'pg'
 # gem 'keen'
 
 
-gem 'minuteman'
+# gem 'minuteman'
 # gem 'blazer'
 # gem 'ahoy
