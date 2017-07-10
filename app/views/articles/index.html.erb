@@ -1,5 +1,9 @@
 <h1>Articles</h1>
 
+<form class='search-form'>
+  <input type="text" class='search-field' />
+</form>
+
 <div id="articles">
 <% @articles.each do |article| %>
   <h2><%= link_to article.name, article %></h2>

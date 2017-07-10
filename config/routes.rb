@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :articles
+  match '/search_suggestions', to: 'search_suggestions#index', via: :get
   root to: 'articles#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -19,6 +19,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
     if @article.save
       redirect_to @article, notice: "Article was successfully created."
+      SearchSuggestion.seed_one(@article) # should be done in background
     else
       render "new"
     end
@@ -36,6 +37,7 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
+    # on destroy, remove from auto suggestions
     redirect_to articles_url
   end
 
