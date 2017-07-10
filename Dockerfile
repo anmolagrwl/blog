@@ -22,7 +22,7 @@
 
 
 FROM alpine:3.2  
-MAINTAINER jari@kontena.io
+MAINTAINER anmol1771@gmail.com
 
 ENV BUILD_PACKAGES curl-dev ruby-dev build-base postgresql-dev libc-dev linux-headers zlib-dev libxml2-dev libxslt-dev g++ make bash
 ENV RUBY_PACKAGES ruby ruby-io-console ruby-bundler ruby-unicorn ruby-irb ruby-json ruby-rake ruby-bigdecimal ruby-io-console libstdc++ tzdata postgresql-client nodejs

@@ -1,7 +1,11 @@
 https://coderjourney.com/convert-rails-app-to-docker/
+http://blog.kontena.io/building-minimal-docker-image-for-rails/
+
+.env
 
 POSTGRES_USER=anmolag
 POSTGRES_PASSWORD=password1
+REDIS_URL=redis://redis:6379/0
 
 docker-compose up -d db
 docker-compose build app
@@ -13,6 +17,3 @@ docker exec -it blog_app_1 /bin/bash
 
 docker-compose start
 docker-compose stop
-
-
-http://blog.kontena.io/building-minimal-docker-image-for-rails/
