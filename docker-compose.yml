@@ -9,7 +9,7 @@ services:
     environment:
       POSTGRES_USER:
       POSTGRES_PASSWORD:
-    image: postgres:9.5
+    image: postgres:9.5-alpine
     volumes:
       - db-data:/usr/local/psql/data
 
@@ -20,5 +20,5 @@ services:
       - .:/usr/src/app
     ports:
       - "8080:8080"
-    depends_on:
-      - db
+    links:
+      - db  

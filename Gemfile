@@ -39,3 +39,5 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 gem 'pg'
+
+gem 'keen'
