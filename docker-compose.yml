@@ -3,13 +3,17 @@ version: "2"
 volumes:
   db-data:
     external: false
+  # esdata1:
+  #   driver: local
+  # esdata2:
+  #   driver: local
 
 services:
   db:
     environment:
       POSTGRES_USER:
       POSTGRES_PASSWORD:
-    image: postgres:9.5
+    image: postgres:9.5-alpine
     volumes:
       - db-data:/usr/local/psql/data
 
@@ -22,3 +26,29 @@ services:
       - "8080:8080"
     depends_on:
       - db
+    logging:
+      driver: gelf
+      options:
+        gelf-address: 'udp://localhost:12201'
+  
+  logstash:
+    build: logstash/
+    command: logstash -f /etc/logstash/conf.d/logstash.conf
+    ports:
+      - "12201:12201/udp"
+    links:
+      - elasticsearch
+
+  elasticsearch:
+    image: elasticsearch:alpine
+    command: elasticsearch -Enetwork.host=0.0.0.0
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+
+  kibana:
+    build: kibana/
+    ports:
+      - "5601:5601"
+    links:
+      - elasticsearch

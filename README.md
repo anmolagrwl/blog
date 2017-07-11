@@ -13,3 +13,12 @@ docker exec -it blog_app_1 /bin/bash
 
 docker-compose start
 docker-compose stop
+
+
+docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearch docker.elastic.co/elasticsearch/elasticsearch:5.5.0
+
+docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearch elasticsearch:alpine
+
+docker run -d -p 5601:5601 -h kibana --link elasticsearch:elasticsearch --name kibana kibana
+
+https://medium.com/@AnjLab/how-to-set-up-elk-for-rails-log-management-using-docker-and-docker-compose-a6edc290669f
