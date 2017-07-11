@@ -31,24 +31,21 @@ services:
       options:
         gelf-address: 'udp://localhost:12201'
   
-  logstash:
-    build: logstash/
-    command: logstash -f /etc/logstash/conf.d/logstash.conf
-    ports:
-      - "12201:12201/udp"
-    links:
-      - elasticsearch
-
-  elasticsearch:
-    image: elasticsearch:alpine
-    command: elasticsearch -Enetwork.host=0.0.0.0
-    ports:
-      - "9200:9200"
-      - "9300:9300"
-
-  kibana:
-    build: kibana/
+  elk:
+    # image: sebp/elk
+    build: ./elk/
+    environment:
+      - MAX_MAP_COUNT=262144
     ports:
       - "5601:5601"
+      - "9200:9200"
+      - "5044:5044"
+  
+  elk-slave:
+    image: sebp/elk
+    environment:
+      - MAX_MAP_COUNT=262144
+    volumes:
+      - ./elk/elasticsearch-slave.yml:/etc/elasticsearch/elasticsearch.yml
     links:
-      - elasticsearch
+      - elk
