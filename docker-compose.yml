@@ -9,9 +9,19 @@ services:
     environment:
       POSTGRES_USER:
       POSTGRES_PASSWORD:
-    image: postgres:9.5
+    image: postgres:9.5-alpine
     volumes:
       - db-data:/usr/local/psql/data
+  
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:5.5.0
+    volumes:
+      - ./elastic.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    environment:
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
 
   app:
     env_file: .env
