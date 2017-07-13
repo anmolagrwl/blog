@@ -29,23 +29,46 @@ services:
     logging:
       driver: gelf
       options:
-        gelf-address: 'udp://localhost:12201'
+        gelf-address: 'udp://localhost:5000'
   
-  elk:
-    # image: sebp/elk
-    build: ./elk/
+  elasticsearch:
+    build: elasticsearch/
+    volumes:
+      - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+    ports:
+      - "9200:9200"
+      - "9300:9300"
     environment:
-      - MAX_MAP_COUNT=262144
+      ES_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+
+  logstash:
+    build: logstash/
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    ports:
+      - "5000:5000"
+    environment:
+      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+    networks:
+      - elk
+    depends_on:
+      - elasticsearch
+
+  kibana:
+    build: kibana/
+    volumes:
+      - ./kibana/config/:/usr/share/kibana/config
     ports:
       - "5601:5601"
-      - "9200:9200"
-      - "5044:5044"
-  
-  elk-slave:
-    image: sebp/elk
-    environment:
-      - MAX_MAP_COUNT=262144
-    volumes:
-      - ./elk/elasticsearch-slave.yml:/etc/elasticsearch/elasticsearch.yml
-    links:
+    networks:
       - elk
+    depends_on:
+      - elasticsearch
+
+networks:
+
+  elk:
+    driver: bridge

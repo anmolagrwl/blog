@@ -22,3 +22,5 @@ docker run -d -p 9200:9200 -p 9300:9300 -it -h elasticsearch --name elasticsearc
 docker run -d -p 5601:5601 -h kibana --link elasticsearch:elasticsearch --name kibana kibana
 
 https://medium.com/@AnjLab/how-to-set-up-elk-for-rails-log-management-using-docker-and-docker-compose-a6edc290669f
+
+https://github.com/deviantony/docker-elk

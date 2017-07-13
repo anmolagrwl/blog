@@ -1,3 +1,5 @@
-FROM logstash:alpine
+# https://github.com/elastic/logstash-docker
+FROM docker.elastic.co/logstash/logstash:5.5.0
 
-ADD logstash.conf /etc/logstash/conf.d/
+# Add your logstash plugins setup here
+# Example: RUN logstash-plugin install logstash-filter-json
