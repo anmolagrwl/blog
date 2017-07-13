@@ -39,3 +39,6 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 gem 'pg'
+
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
