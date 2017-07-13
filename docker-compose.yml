@@ -9,7 +9,7 @@ services:
     environment:
       POSTGRES_USER:
       POSTGRES_PASSWORD:
-    image: postgres:9.5
+    image: postgres:9.5-alpine
     volumes:
       - db-data:/usr/local/psql/data
 
