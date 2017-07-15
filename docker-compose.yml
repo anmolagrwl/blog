@@ -27,9 +27,9 @@ services:
     depends_on:
       - db
     logging:
-      driver: gelf
+      driver: syslog
       options:
-        gelf-address: 'udp://localhost:5000'
+        syslog-address: 'tcp://192.168.65.1:53'
   
   elasticsearch:
     build: elasticsearch/
@@ -49,7 +49,7 @@ services:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./logstash/pipeline:/usr/share/logstash/pipeline
     ports:
-      - "5000:5000"
+      - "5000:5000/tcp"
     environment:
       LS_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:

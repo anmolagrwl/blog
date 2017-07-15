@@ -38,8 +38,18 @@ GEM
       execjs
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
+    elasticsearch (5.0.4)
+      elasticsearch-api (= 5.0.4)
+      elasticsearch-transport (= 5.0.4)
+    elasticsearch-api (5.0.4)
+      multi_json
+    elasticsearch-transport (5.0.4)
+      faraday
+      multi_json
     erubis (2.7.0)
     execjs (2.7.0)
+    faraday (0.12.1)
+      multipart-post (>= 1.2, < 3)
     hike (1.2.3)
     i18n (0.8.4)
     jbuilder (2.6.4)
@@ -56,7 +66,7 @@ GEM
     mime-types (1.25.1)
     minitest (5.10.2)
     multi_json (1.12.1)
-    newrelic_rpm (4.2.0.334)
+    multipart-post (2.0.0)
     pg (0.21.0)
     polyglot (0.3.5)
     rack (1.5.5)
@@ -127,9 +137,9 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   coffee-rails (~> 4.0.0)
+  elasticsearch
   jbuilder (~> 2.0)
   jquery-rails
-  newrelic_rpm
   pg
   rails (= 4.1.4)
   rails_semantic_logger

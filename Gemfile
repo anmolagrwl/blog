@@ -42,3 +42,4 @@ gem 'pg'
 
 gem 'awesome_print'
 gem 'rails_semantic_logger'
+gem 'elasticsearch'
