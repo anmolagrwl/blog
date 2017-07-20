@@ -24,12 +24,8 @@ services:
       - .:/usr/src/app
     ports:
       - "8080:8080"
-    depends_on:
+    links:
       - db
-    logging:
-      driver: syslog
-      options:
-        syslog-address: 'tcp://192.168.65.1:53'
   
   elasticsearch:
     build: elasticsearch/

@@ -24,3 +24,8 @@ docker run -d -p 5601:5601 -h kibana --link elasticsearch:elasticsearch --name k
 https://medium.com/@AnjLab/how-to-set-up-elk-for-rails-log-management-using-docker-and-docker-compose-a6edc290669f
 
 https://github.com/deviantony/docker-elk
+
+https://github.com/roidrage/lograge
+https://github.com/dwbutler/logstash-logger
+http://rocketjob.github.io/semantic_logger/appenders.html
+https://github.com/fluent/fluent-logger-ruby

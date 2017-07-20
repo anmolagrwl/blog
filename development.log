@@ -1,0 +1,87 @@
+2017-07-18 02:02:42.856899 [36mI[0m [13435:70299236130940 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:02:43.006081 [32mD[0m [13435:70299236130940] [32mActiveRecord::Base[0m --   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+2017-07-18 02:02:43.019994 [32mD[0m [13435:70299236130940] [32mArticlesController[0m -- Processing #index
+2017-07-18 02:02:43.036032 [32mD[0m [13435:70299236130940] [32mActiveRecord::Base[0m --   [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+2017-07-18 02:02:43.043914 [36mI[0m [13435:70299236130940 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered articles/index.html.erb within layouts/application (9.5ms)
+2017-07-18 02:02:43.096270 [36mI[0m [13435:70299236130940 log_subscriber.rb:12] ([1m76.2ms[0m) [36mArticlesController[0m -- Completed #index -- { :controller[0;37m => [0m[0;33m"ArticlesController"[0m, :action[0;37m => [0m[0;33m"index"[0m, :format[0;37m => [0m[0;33m"HTML"[0m, :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :status[0;37m => [0m[1;34m200[0m, :view_runtime[0;37m => [0m[1;34m66.45[0m, :db_runtime[0;37m => [0m[1;34m0.39[0m, :status_message[0;37m => [0m[0;33m"OK"[0m }
+2017-07-18 02:02:44.198100 [36mI[0m [13435:70299236119800 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/service-worker.js"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:02:44.199499 [31mF[0m [13435:70299236119800 debug_exceptions.rb:7] [31mRails[0m -- Exception: [31mActionController::RoutingError: No route matches [GET] "/service-worker.js"[0m
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/railties-4.1.4/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rails_semantic_logger-4.1.3/lib/rails_semantic_logger/extensions/rails/rack/logger.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/activesupport-4.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/railties-4.1.4/lib/rails/engine.rb:514:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/railties-4.1.4/lib/rails/application.rb:144:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/content_length.rb:14:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+/Users/apple/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/Users/apple/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/Users/apple/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+2017-07-18 02:02:44.248960 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+2017-07-18 02:02:44.276666 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.8ms)
+2017-07-18 02:02:44.304560 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.6ms)
+2017-07-18 02:02:44.304733 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.7ms)
+2017-07-18 02:02:44.849753 [36mI[0m [13435:70299236119800 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles/1"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:02:44.852992 [32mD[0m [13435:70299236119800] [32mArticlesController[0m -- Processing #show
+2017-07-18 02:02:44.858242 [32mD[0m [13435:70299236119800] [32mActiveRecord::Base[0m --   [1m[36mArticle Load (0.2ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 1]]
+2017-07-18 02:02:44.865613 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered articles/show.html.erb within layouts/application (1.4ms)
+2017-07-18 02:02:44.904042 [36mI[0m [13435:70299236119800 log_subscriber.rb:12] ([1m50.9ms[0m) [36mArticlesController[0m -- Completed #show -- { :controller[0;37m => [0m[0;33m"ArticlesController"[0m, :action[0;37m => [0m[0;33m"show"[0m, :params[0;37m => [0m{ "id"[0;37m => [0m[0;33m"1"[0m }, :format[0;37m => [0m[0;33m"HTML"[0m, :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles/1"[0m, :status[0;37m => [0m[1;34m200[0m, :view_runtime[0;37m => [0m[1;34m45.48[0m, :db_runtime[0;37m => [0m[1;34m0.2[0m, :status_message[0;37m => [0m[0;33m"OK"[0m }
+2017-07-18 02:02:46.044171 [36mI[0m [13435:70299236119800 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:02:46.046270 [32mD[0m [13435:70299236119800] [32mArticlesController[0m -- Processing #index
+2017-07-18 02:02:46.054530 [32mD[0m [13435:70299236119800] [32mActiveRecord::Base[0m --   [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+2017-07-18 02:02:46.059079 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered articles/index.html.erb within layouts/application (5.1ms)
+2017-07-18 02:02:46.101876 [36mI[0m [13435:70299236119800 log_subscriber.rb:12] ([1m55.5ms[0m) [36mArticlesController[0m -- Completed #index -- { :controller[0;37m => [0m[0;33m"ArticlesController"[0m, :action[0;37m => [0m[0;33m"index"[0m, :format[0;37m => [0m[0;33m"HTML"[0m, :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :status[0;37m => [0m[1;34m200[0m, :view_runtime[0;37m => [0m[1;34m54.5[0m, :db_runtime[0;37m => [0m[1;34m0.23[0m, :status_message[0;37m => [0m[0;33m"OK"[0m }
+2017-07-18 02:02:47.110837 [36mI[0m [13435:70299236119800 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles/2"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:02:47.113162 [32mD[0m [13435:70299236119800] [32mArticlesController[0m -- Processing #show
+2017-07-18 02:02:47.116441 [32mD[0m [13435:70299236119800] [32mActiveRecord::Base[0m --   [1m[36mArticle Load (0.8ms)[0m  [1mSELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1[0m  [["id", 2]]
+2017-07-18 02:02:47.123835 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered articles/show.html.erb within layouts/application (0.7ms)
+2017-07-18 02:02:47.160182 [36mI[0m [13435:70299236119800 log_subscriber.rb:12] ([1m46.9ms[0m) [36mArticlesController[0m -- Completed #show -- { :controller[0;37m => [0m[0;33m"ArticlesController"[0m, :action[0;37m => [0m[0;33m"show"[0m, :params[0;37m => [0m{ "id"[0;37m => [0m[0;33m"2"[0m }, :format[0;37m => [0m[0;33m"HTML"[0m, :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles/2"[0m, :status[0;37m => [0m[1;34m200[0m, :view_runtime[0;37m => [0m[1;34m43.42[0m, :db_runtime[0;37m => [0m[1;34m0.79[0m, :status_message[0;37m => [0m[0;33m"OK"[0m }
+2017-07-18 02:02:48.172307 [36mI[0m [13435:70299236119800 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:02:48.177058 [32mD[0m [13435:70299236119800] [32mArticlesController[0m -- Processing #index
+2017-07-18 02:02:48.185841 [32mD[0m [13435:70299236119800] [32mActiveRecord::Base[0m --   [1m[35mArticle Load (0.2ms)[0m  SELECT "articles".* FROM "articles"
+2017-07-18 02:02:48.187705 [36mI[0m [13435:70299236119800 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered articles/index.html.erb within layouts/application (2.5ms)
+2017-07-18 02:02:48.232118 [36mI[0m [13435:70299236119800 log_subscriber.rb:12] ([1m55.0ms[0m) [36mArticlesController[0m -- Completed #index -- { :controller[0;37m => [0m[0;33m"ArticlesController"[0m, :action[0;37m => [0m[0;33m"index"[0m, :format[0;37m => [0m[0;33m"HTML"[0m, :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :status[0;37m => [0m[1;34m200[0m, :view_runtime[0;37m => [0m[1;34m53.64[0m, :db_runtime[0;37m => [0m[1;34m0.24[0m, :status_message[0;37m => [0m[0;33m"OK"[0m }
+2017-07-18 02:04:52.483814 [36mI[0m [13490:70256736978420 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:04:52.630348 [32mD[0m [13490:70256736978420] [32mActiveRecord::Base[0m --   ActiveRecord::SchemaMigration Load (0.1ms)  SELECT "schema_migrations".* FROM "schema_migrations"
+2017-07-18 02:04:52.646563 [32mD[0m [13490:70256736978420] [32mArticlesController[0m -- Processing #index
+2017-07-18 02:04:52.668520 [32mD[0m [13490:70256736978420] [32mActiveRecord::Base[0m --   Article Load (0.2ms)  SELECT "articles".* FROM "articles"
+2017-07-18 02:04:52.677431 [36mI[0m [13490:70256736978420 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered articles/index.html.erb within layouts/application (10.6ms)
+2017-07-18 02:04:52.743329 [36mI[0m [13490:70256736978420 log_subscriber.rb:12] ([1m96.7ms[0m) [36mArticlesController[0m -- Completed #index -- { :controller[0;37m => [0m[0;33m"ArticlesController"[0m, :action[0;37m => [0m[0;33m"index"[0m, :format[0;37m => [0m[0;33m"HTML"[0m, :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles"[0m, :status[0;37m => [0m[1;34m200[0m, :view_runtime[0;37m => [0m[1;34m83.22[0m, :db_runtime[0;37m => [0m[1;34m0.36[0m, :status_message[0;37m => [0m[0;33m"OK"[0m }
+2017-07-18 02:04:53.837819 [36mI[0m [13490:70256736966680 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/service-worker.js"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:04:53.839741 [31mF[0m [13490:70256736966680 debug_exceptions.rb:7] [31mRails[0m -- Exception: [31mActionController::RoutingError: No route matches [GET] "/service-worker.js"[0m
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/railties-4.1.4/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rails_semantic_logger-4.1.3/lib/rails_semantic_logger/extensions/rails/rack/logger.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/methodoverride.rb:21:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/runtime.rb:17:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/activesupport-4.1.4/lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/sendfile.rb:112:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/railties-4.1.4/lib/rails/engine.rb:514:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/railties-4.1.4/lib/rails/application.rb:144:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/lock.rb:17:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/content_length.rb:14:in `call'
+/Users/apple/.rvm/gems/ruby-2.2.2/gems/rack-1.5.5/lib/rack/handler/webrick.rb:60:in `service'
+/Users/apple/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+/Users/apple/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+/Users/apple/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+2017-07-18 02:04:53.887789 [36mI[0m [13490:70256736966680 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+2017-07-18 02:04:53.915619 [36mI[0m [13490:70256736966680 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+2017-07-18 02:04:53.943536 [36mI[0m [13490:70256736966680 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.9ms)
+2017-07-18 02:04:53.943935 [36mI[0m [13490:70256736966680 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered /Users/apple/.rvm/gems/ruby-2.2.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (78.8ms)
+2017-07-18 02:04:56.879232 [36mI[0m [13490:70256736966680 logger.rb:37] [36mRack[0m -- Started -- { :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles/1"[0m, :ip[0;37m => [0m[0;33m"127.0.0.1"[0m }
+2017-07-18 02:04:56.882025 [32mD[0m [13490:70256736966680] [32mArticlesController[0m -- Processing #show
+2017-07-18 02:04:56.885863 [32mD[0m [13490:70256736966680] [32mActiveRecord::Base[0m --   Article Load (0.2ms)  SELECT  "articles".* FROM "articles"  WHERE "articles"."id" = ? LIMIT 1  [["id", 1]]
+2017-07-18 02:04:56.893751 [36mI[0m [13490:70256736966680 log_subscriber.rb:93] [36mActionView::Base[0m --   Rendered articles/show.html.erb within layouts/application (1.5ms)
+2017-07-18 02:04:56.932700 [36mI[0m [13490:70256736966680 log_subscriber.rb:12] ([1m50.6ms[0m) [36mArticlesController[0m -- Completed #show -- { :controller[0;37m => [0m[0;33m"ArticlesController"[0m, :action[0;37m => [0m[0;33m"show"[0m, :params[0;37m => [0m{ "id"[0;37m => [0m[0;33m"1"[0m }, :format[0;37m => [0m[0;33m"HTML"[0m, :method[0;37m => [0m[0;33m"GET"[0m, :path[0;37m => [0m[0;33m"/articles/1"[0m, :status[0;37m => [0m[1;34m200[0m, :view_runtime[0;37m => [0m[1;34m46.26[0m, :db_runtime[0;37m => [0m[1;34m0.24[0m, :status_message[0;37m => [0m[0;33m"OK"[0m }

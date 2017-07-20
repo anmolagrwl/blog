@@ -60,6 +60,9 @@ GEM
       thor (>= 0.14, < 2.0)
     json (1.8.6)
     kgio (2.11.0)
+    logstash-event (1.2.02)
+    logstash-logger (0.25.1)
+      logstash-event (~> 1.2)
     mail (2.5.5)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -140,6 +143,7 @@ DEPENDENCIES
   elasticsearch
   jbuilder (~> 2.0)
   jquery-rails
+  logstash-logger
   pg
   rails (= 4.1.4)
   rails_semantic_logger
@@ -151,4 +155,4 @@ DEPENDENCIES
   unicorn
 
 BUNDLED WITH
-   1.15.1
+   1.15.2

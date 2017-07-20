@@ -34,4 +34,19 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+  # Enable the logstasher logs for the current environment
+# config.logstasher.enabled = true
+
+# # Each of the following lines are optional. If you want to selectively disable log subscribers.
+# config.logstasher.controller_enabled = false
+# config.logstasher.mailer_enabled = false
+# config.logstasher.record_enabled = false
+# config.logstasher.view_enabled = false
+# config.logstasher.job_enabled = false
+
+# # Enable logging of controller params
+# config.logstasher.log_controller_parameters = true
+
+# # This line is optional if you do not want to log the backtrace of exceptions
+# config.logstasher.backtrace = true
 end
