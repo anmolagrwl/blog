@@ -26,5 +26,10 @@ module Blog
     config.semantic_logger.backtrace_level = :info
     config.rails_semantic_logger.quiet_assets = true
     config.colorize_logging = false
+
+    # config.log_level = :info
+    # config.logger = ActFluentLoggerRails::Logger.new
+    # config.lograge.enabled = true
+    # config.lograge.formatter = Lograge::Formatters::Json.new
   end
 end

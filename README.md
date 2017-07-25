@@ -29,3 +29,6 @@ https://github.com/roidrage/lograge
 https://github.com/dwbutler/logstash-logger
 http://rocketjob.github.io/semantic_logger/appenders.html
 https://github.com/fluent/fluent-logger-ruby
+
+https://docs.fluentd.org/v0.12/articles/config-file
+https://docs.fluentd.org/v0.12/articles/ruby

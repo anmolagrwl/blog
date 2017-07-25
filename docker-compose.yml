@@ -16,6 +16,17 @@ services:
     image: postgres:9.5-alpine
     volumes:
       - db-data:/usr/local/psql/data
+  
+  fluentd:
+    image: fluent/fluentd:latest
+    volumes:
+      - "/data/:/fluentd/log"
+    ports:
+      - 24224:24224
+      - 24224:24224/udp
+    environment:
+      # - FLUENTD_CONF=fluent.docker.conf
+      - FLUENTD_OPT=-v
 
   app:
     env_file: .env
@@ -36,8 +47,6 @@ services:
       - "9300:9300"
     environment:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
-    networks:
-      - elk
 
   logstash:
     build: logstash/

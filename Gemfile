@@ -45,3 +45,9 @@ gem 'rails_semantic_logger'
 gem 'elasticsearch'
 # gem 'logstasher'
 gem 'logstash-logger'
+
+
+# gem 'act-fluent-logger-rails'
+# gem 'lograge'
+# gem 'fluent-plugin-parser'
+# gem 'fluent-logger', "~> 0.4.3"
