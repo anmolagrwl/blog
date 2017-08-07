@@ -13,3 +13,5 @@ docker exec -it blog_app_1 /bin/bash
 
 docker-compose start
 docker-compose stop
+
+http://docs.graylog.org/en/2.2/pages/installation/docker.html

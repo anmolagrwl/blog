@@ -39,3 +39,8 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 
 gem 'pg'
+
+gem 'awesome_print'
+gem 'rails_semantic_logger'
+gem 'gelf'
+# gem 'rails-api'
