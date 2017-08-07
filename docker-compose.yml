@@ -23,3 +23,15 @@ services:
       - "80:80"
     depends_on:
       - db
+  sematext:
+    image: 'sematext/sematext-agent-docker:latest'
+    environment:
+      - LOGSENE_TOKEN=df853ccf-b859-4d75-a983-437d39ee3b3a
+      #- SPM_TOKEN=YOUR_SPM_TOKEN # if you also wish to monitor your Docker setup, create an SPM Docker app (if you don't have one yet), then use its token here and uncomment the line
+      - SPM_RECEIVER_URL=https://spm-receiver.eu.sematext.com/receiver/v1
+      - LOGSENE_RECEIVER_URL=https://logsene-receiver.eu.sematext.com
+      - EVENTS_RECEIVER_URL=https://event-receiver.eu.sematext.com
+    privileged: true
+    restart: always
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
