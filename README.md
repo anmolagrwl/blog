@@ -13,3 +13,5 @@ docker exec -it blog_app_1 /bin/bash
 
 docker-compose start
 docker-compose stop
+
+https://rossfairbanks.com/2015/03/06/rails-app-on-docker-using-passenger-image.html
