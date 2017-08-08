@@ -20,5 +20,11 @@ module Blog
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.logger = Logger.new(STDOUT)
+
+    # config.lograge.enabled = true
+    # config.lograge.formatter = Lograge::Formatters::Logstash.new
+
+    config.rails_semantic_logger.semantic   = true
+
   end
 end
